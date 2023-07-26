@@ -9,8 +9,7 @@ import { BusquedasService } from 'src/app/services/busquedas.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styles: [
-  ]
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
 
