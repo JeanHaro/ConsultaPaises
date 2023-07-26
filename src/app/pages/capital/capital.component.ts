@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-capital',
-  templateUrl: './capital.component.html',
-  styleUrls: ['./capital.component.scss']
+  templateUrl: './capital.component.html'
 })
 export class CapitalComponent {
   public tipo: string = 'capital';

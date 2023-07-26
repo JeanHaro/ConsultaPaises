@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-continente',
-  templateUrl: './continente.component.html',
-  styleUrls: ['./continente.component.scss']
+  templateUrl: './continente.component.html'
 })
 export class ContinenteComponent {
   public tipo: string = 'region';

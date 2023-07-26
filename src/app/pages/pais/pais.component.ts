@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pais',
-  templateUrl: './pais.component.html',
-  styleUrls: ['./pais.component.scss']
+  templateUrl: './pais.component.html'
 })
 export class PaisComponent {
   public tipo: string = 'name';
