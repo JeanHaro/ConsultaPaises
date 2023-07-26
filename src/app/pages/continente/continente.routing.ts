@@ -7,7 +7,8 @@ import { ContinenteComponent } from './continente.component';
 const routes: Routes = [
     {
         path: '',
-        component: ContinenteComponent
+        component: ContinenteComponent,
+        data: { titulo: 'Continente' }
     }
 ]
 

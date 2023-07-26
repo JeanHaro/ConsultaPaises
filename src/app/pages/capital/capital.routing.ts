@@ -7,7 +7,8 @@ import { CapitalComponent } from "./capital.component";
 const routes: Routes = [
     {
         path: '',
-        component: CapitalComponent
+        component: CapitalComponent,
+        data: { titulo: 'Capital' }
     }
 ]
 
