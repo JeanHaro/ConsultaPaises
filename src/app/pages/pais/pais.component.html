@@ -1,34 +1,6 @@
-<main class="main">
-    <h1>Busca los países por sus nombres</h1>
-
-    <input 
-        class="input none mb-50" 
-        type="text" 
-        placeholder="Buscar país por sus nombres"
-        (keyup)="buscar(txtTermino.value)"
-        #txtTermino
-    >
-
-    <div class="main__errors" *ngIf="errores">ADVERTENCIA: No se puede encontrar el país con ese nombre</div>
-
-    <div class="main__table" *ngIf="pais.length > 0">
-        <table>
-            <thead>
-                <tr>
-                    <th>N°</th>
-                    <th>País</th>
-                    <th>Capital</th>
-                    <th>Continente</th>
-                </tr>
-            </thead>
-            <tbody>                            
-                <tr *ngFor="let pais of pais">
-                    <td> <p>{{ pais.order }}</p> </td>
-                    <td>{{ pais.nombre }}</td>
-                    <td>{{ pais.capital }}</td>
-                    <td>{{ pais.continente }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</main>
+<app-search 
+    [tipo]="'name'" 
+    [title]="'sus nombres'" 
+    [place]="'sus nombres'" 
+    [errorText]="''"
+></app-search>

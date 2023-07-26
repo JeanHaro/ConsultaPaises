@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 // Modulos
 import { SharedModule } from './shared/shared.module';
+import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -14,12 +15,13 @@ import { LayoutComponent } from './layout/layout.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    ComponentsModule,
     HttpClientModule
   ],
   providers: [],

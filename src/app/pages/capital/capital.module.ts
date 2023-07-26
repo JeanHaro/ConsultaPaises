@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+// Modulos
+import { ComponentsModule } from 'src/app/components/components.module';
+
 // Componentes
 import { CapitalComponent } from './capital.component';
 
@@ -19,7 +22,8 @@ import { CapitalRoutingModule } from './capital.routing';
     CapitalRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    ComponentsModule
   ]
 })
 export class CapitalModule { }

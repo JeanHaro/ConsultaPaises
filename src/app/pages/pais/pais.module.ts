@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Modulos
+import { ComponentsModule } from 'src/app/components/components.module';
+
 // Componentes
 import { PaisComponent } from './pais.component';
 
@@ -13,7 +16,8 @@ import { PaisRoutingModule } from './pais.routing';
   ],
   imports: [
     CommonModule,
-    PaisRoutingModule
+    PaisRoutingModule,
+    ComponentsModule
   ]
 })
 export class PaisModule { }
