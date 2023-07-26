@@ -1,0 +1,44 @@
+.header {
+    background-color: var(--colorPrincipal);
+    padding: 1rem;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__logo {
+            img {
+                width: 16rem;
+            }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            p {
+                color: var(--colorBlanco);
+                margin-right: 2rem;
+            }
+
+            a {
+                color: var(--colorBlanco);
+                margin-right: 1rem;
+                transition: 0.5s ease;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    background-color: #c95406;
+                }
+
+                &.active {
+                    background-color: #c95406;
+                }
+            }
+        }
+    }
+}
