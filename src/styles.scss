@@ -51,7 +51,7 @@ body {
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: var(--colorSecundario);
+        background-color: var(--colorPrincipal);
         border-radius: 20px;
         border: 2px solid transparent;
     }
@@ -125,4 +125,96 @@ ul {
     border-radius: 0.5rem;
     padding: 1.8rem;
     cursor: pointer;
+}
+
+.mb-50 {
+    margin-bottom: 5rem;
+}
+
+.input {
+    width: 50%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 2rem;
+    color: var(--colorNegro);
+    border: 2px solid var(--colorSecundario);
+}
+
+// -------------------------- Pages ---------------
+main {
+    min-height: calc(100vh - 10rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    // Tabla de horarios
+    table {
+        position: relative;
+
+        background-color: var(--colorBlanco);
+        border-collapse: collapse;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 0.8rem;
+        overflow: hidden;
+        width: 50%;
+        z-index: 1;
+
+        // Cabecera
+        thead {
+            tr {
+                position: sticky;
+                top: 0;
+                right: 0;
+                left: 0;
+
+                background-color: var(--colorSecundario);
+                color: var(--colorBlanco);
+                z-index: 10;
+            }
+        }
+
+        // Lista
+        tbody {
+            tr {
+                &:nth-child(2n) {
+                    background-color: var(--colorEntorno);
+                }
+            }
+        }
+
+        tr {
+            display: flex;
+
+            @media (min-width: 1900px) {
+                display: table-row;
+            }
+        }
+
+        td, th {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 2rem;
+            width: 20rem;
+
+            @media (min-width: 1900px) {
+                display: table-cell;
+                width: auto;
+            }
+        }
+
+        td {
+            padding: 1rem 2rem;
+        }
+    }
 }

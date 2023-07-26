@@ -18,11 +18,13 @@
             align-items: center;
 
             p {
+                font-family: var(--fuentePrincipal);
                 color: var(--colorBlanco);
                 margin-right: 2rem;
             }
 
             a {
+                font-family: var(--fuentePrincipal);
                 color: var(--colorBlanco);
                 margin-right: 1rem;
                 transition: 0.5s ease;
