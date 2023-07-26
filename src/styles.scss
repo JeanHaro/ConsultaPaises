@@ -38,7 +38,7 @@ body {
     }
     
     &::-webkit-scrollbar:vertical {
-        width: 7px;
+        width: 5px;
     }
     
     &::-webkit-scrollbar-button:increment,
@@ -47,11 +47,11 @@ body {
     } 
     
     &::-webkit-scrollbar:horizontal {
-        height: 7px;
+        height: 5px;
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: var(--colorPrincipal);
+        background-color: var(--colorSecundario);
         border-radius: 20px;
         border: 2px solid transparent;
     }
@@ -155,66 +155,100 @@ main {
         margin-bottom: 2rem;
     }
 
-    // Tabla de horarios
-    table {
-        position: relative;
-
-        background-color: var(--colorBlanco);
-        border-collapse: collapse;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 0.8rem;
-        overflow: hidden;
+    // Contenedor tabla
+    .main__table {
+        border-radius: 0.5rem;
+        overflow: scroll;
         width: 50%;
-        z-index: 1;
+        max-height: 30rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
-        // Cabecera
-        thead {
-            tr {
-                position: sticky;
-                top: 0;
-                right: 0;
-                left: 0;
-
-                background-color: var(--colorSecundario);
-                color: var(--colorBlanco);
-                z-index: 10;
-            }
+        // Scroll
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+        
+        &::-webkit-scrollbar:vertical {
+            width: 7px;
+        }
+        
+        &::-webkit-scrollbar-button:increment,
+        &::-webkit-scrollbar-button {
+            display: none;
+        } 
+        
+        &::-webkit-scrollbar:horizontal {
+            height: 7px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--colorSecundario);
+            border-radius: 20px;
+            border: 2px solid transparent;
+        }
+        
+        &::-webkit-scrollbar-track {
+            border-radius: 20px;  
         }
 
-        // Lista
-        tbody {
-            tr {
-                &:nth-child(2n) {
-                    background-color: var(--colorEntorno);
+        // Tabla de horarios
+        table {
+            position: relative;
+
+            background-color: var(--colorBlanco);
+            border-collapse: collapse;
+            width: 100%;
+            z-index: 1;
+
+            // Cabecera
+            thead {
+                tr {
+                    position: sticky;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+
+                    background-color: var(--colorSecundario);
+                    color: var(--colorBlanco);
+                    z-index: 10;
                 }
             }
-        }
 
-        tr {
-            display: flex;
-
-            @media (min-width: 1900px) {
-                display: table-row;
+            // Lista
+            tbody {
+                tr {
+                    &:nth-child(2n) {
+                        background-color: var(--colorEntorno);
+                    }
+                }
             }
-        }
 
-        td, th {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            tr {
+                display: flex;
 
-            text-align: center;
-            padding: 2rem;
-            width: 20rem;
-
-            @media (min-width: 1900px) {
-                display: table-cell;
-                width: auto;
+                @media (min-width: 1900px) {
+                    display: table-row;
+                }
             }
-        }
 
-        td {
-            padding: 1rem 2rem;
+            td, th {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                text-align: center;
+                padding: 2rem;
+                width: 20rem;
+
+                @media (min-width: 1900px) {
+                    display: table-cell;
+                    width: auto;
+                }
+            }
+
+            td {
+                padding: 1rem 2rem;
+            }
         }
     }
 }

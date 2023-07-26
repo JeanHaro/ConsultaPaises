@@ -1,34 +1,34 @@
 <main class="main">
     <h1>Busca los países por nombres de sus capitales</h1>
 
-    <input class="input none mb-50" type="text" placeholder="Buscar país por nombre de capital">
+    <input 
+        class="input none mb-50" 
+        type="text" 
+        placeholder="Buscar país por nombre de capital"
+        (keyup)="buscar(txtTermino.value)"
+        #txtTermino
+    >
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="w100">N°</th>
-                <th>País</th>
-                <th>Capital</th>
-                <th class="w140">Continente</th>
-            </tr>
-        </thead>
-        <tbody>                            
-            <tr>
-                <td>
-                    <p>1</p>
-                </td>
-                <td>Perú</td>
-                <td>Lima</td>
-                <td>América</td>
-            </tr>
-            <tr>
-                <td>
-                    <p>1</p>
-                </td>
-                <td>Perú</td>
-                <td>Lima</td>
-                <td>América</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="main__errors" *ngIf="errores">ADVERTENCIA: No se puede encontrar el país con ese nombre de capital</div>
+
+    <div class="main__table" *ngIf="pais.length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>País</th>
+                    <th>Capital</th>
+                    <th>Continente</th>
+                </tr>
+            </thead>
+            <tbody>                            
+                <tr *ngFor="let pais of pais">
+                    <td>{{ pais.order }}</td>
+                    <td>{{ pais.nombre }}</td>
+                    <td>{{ pais.capital }}</td>
+                    <td>{{ pais.continente }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
